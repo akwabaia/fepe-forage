@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>FEPE SARL — Forage &amp; adduction d'eau en Côte d'Ivoire | Anyama, Abidjan</title>
+<meta name="description" content="FEPE SARL, basée à Anyama (Abidjan) : forage d'eau, géophysique, adduction d'eau potable, châteaux d'eau, pompage solaire, génie civil et VRD en Côte d'Ivoire et dans la sous-région.">
+<meta property="og:title" content="FEPE SARL — L'eau, notre métier, du forage au robinet">
+<meta property="og:description" content="Forage, adduction d'eau potable, châteaux d'eau, équipement et pompage en Côte d'Ivoire.">
+<meta property="og:image" content="assets/hero-foreuse.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A2540">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231668B0'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"FEPE SARL","description":"Forage et adduction d'eau, génie civil, VRD","url":"https://www.fepe-forage.com","telephone":"+2250759494523","email":"contact@fepe-forage.com","address":{"@type":"PostalAddress","streetAddress":"Anyama Schneider, 01 BP 845 Abidjan 01","addressLocality":"Anyama","addressCountry":"CI"},"areaServed":"Côte d'Ivoire"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0" rel="stylesheet">
+<script src="./i18n.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#0A2540;font-family:Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+img{max-width:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+a:focus-visible,button:focus-visible{outline:3px solid #5FB4FF;outline-offset:3px}
+@media (min-width:2200px){body{zoom:1.4}}
+@media (min-width:3200px){body{zoom:2}}
+a{color:#1668B0;text-decoration:none}
+a:hover{color:#0A2540}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#fff;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #E6EBF1">
+  <div style="max-width:1240px;margin:0 auto;padding:14px clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#accueil" style="display:flex;align-items:center;gap:12px;color:#0A2540">
+      <span style="width:34px;height:34px;display:flex;align-items:center;justify-content:center"><span style="width:24px;height:24px;background:#1668B0;border-radius:50% 0 50% 50%;transform:rotate(-45deg);display:block"></span></span>
+      <span style="display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:22px;letter-spacing:.02em">FEPE<span style="color:#1668B0"> SARL</span></span>
+        <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5B6B7F;margin-top:4px">Forage &amp; Adduction d'eau</span>
+      </span>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;align-items:center;gap:30px">
+        <a href="#accueil" style="color:#0A2540;font-weight:600;font-size:15px">Accueil</a>
+        <a href="#entreprise" style="color:#0A2540;font-weight:500;font-size:15px" style-hover="color:#1668B0">L'entreprise</a>
+        <a href="#services" style="color:#0A2540;font-weight:500;font-size:15px" style-hover="color:#1668B0">Services</a>
+        <a href="#realisations" style="color:#0A2540;font-weight:500;font-size:15px" style-hover="color:#1668B0">Réalisations</a>
+        <a href="#references" style="color:#0A2540;font-weight:500;font-size:15px" style-hover="color:#1668B0">Références</a>
+        <a href="#contact" style="color:#0A2540;font-weight:500;font-size:15px" style-hover="color:#1668B0">Contact</a>
+        <a href="#contact" style="background:#1668B0;color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:14px;padding:12px 22px;border-radius:10px" style-hover="background:#0A2540;color:#fff">Nous contacter</a>
+      </nav>
+    </sc-if>
+    <div style="display:flex;align-items:center;gap:2px;background:#F0F4F8;border-radius:10px;padding:3px;margin-inline-start:auto" aria-label="Langue">
+      <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+        <button onClick="{{ l.set }}" style="border:none;cursor:pointer;font-family:Archivo,sans-serif;font-weight:700;font-size:13px;padding:8px 10px;border-radius:8px;background:{{ l.bg }};color:{{ l.color }}">{{ l.label }}</button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="width:46px;height:46px;border-radius:10px;border:1px solid #D5DEE8;background:#fff;color:#0A2540;display:flex;align-items:center;justify-content:center;cursor:pointer">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px">{{ menuIcon }}</span>
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ mobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav style="display:flex;flex-direction:column;padding:8px 20px 20px;gap:2px;border-top:1px solid #E6EBF1;background:#fff">
+      <a href="#accueil" onClick="{{ closeMenu }}" style="color:#0A2540;font-weight:600;font-size:17px;padding:14px 4px;border-bottom:1px solid #EEF2F6">Accueil</a>
+      <a href="#entreprise" onClick="{{ closeMenu }}" style="color:#0A2540;font-weight:500;font-size:17px;padding:14px 4px;border-bottom:1px solid #EEF2F6">L'entreprise</a>
+      <a href="#services" onClick="{{ closeMenu }}" style="color:#0A2540;font-weight:500;font-size:17px;padding:14px 4px;border-bottom:1px solid #EEF2F6">Services</a>
+      <a href="#realisations" onClick="{{ closeMenu }}" style="color:#0A2540;font-weight:500;font-size:17px;padding:14px 4px;border-bottom:1px solid #EEF2F6">Réalisations</a>
+      <a href="#references" onClick="{{ closeMenu }}" style="color:#0A2540;font-weight:500;font-size:17px;padding:14px 4px;border-bottom:1px solid #EEF2F6">Références</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="background:#1668B0;color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:15px;border-radius:10px;text-align:center;margin-top:14px">Nous contacter</a>
+    </nav>
+  </sc-if>
+</header>
+
+<section id="accueil" style="position:relative;min-height:min(88vh,800px);display:flex;align-items:flex-end;background:#0A2540">
+  <div style="position:absolute;inset:0">
+    <img src="assets/hero-foreuse.jpg" alt="Équipe FEPE sur un chantier de forage" style="width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block">
+
+  </div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,37,64,.35) 0%,rgba(10,37,64,.55) 45%,rgba(10,37,64,.92) 100%)"></div>
+  <div style="position:relative;width:100%;max-width:1240px;margin:0 auto;padding:clamp(120px,18vh,180px) clamp(20px,4vw,40px) clamp(56px,9vh,96px);pointer-events:none">
+    <div style="max-width:760px;display:flex;flex-direction:column;gap:24px">
+      <span style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:999px;white-space:nowrap">
+        <span style="width:8px;height:8px;border-radius:50%;background:#5FB4FF"></span>Anyama · Abidjan · Côte d'Ivoire
+      </span>
+      <h1 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;color:#fff;font-size:clamp(38px,6.4vw,76px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">L'eau, notre métier — du forage au robinet</h1>
+      <p style="margin:0;color:#E3ECF5;font-size:clamp(17px,1.7vw,20px);line-height:1.6;max-width:640px;text-wrap:pretty">FEPE SARL conçoit et réalise vos projets d'eau et de génie civil en Côte d'Ivoire : forage, adduction d'eau potable, châteaux d'eau, équipement et pompage. De l'étude du terrain à la mise en service, des ouvrages fiables et durables.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;pointer-events:auto">
+        <a href="{{ waDevis }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#25D366;color:#06301A;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:17px 26px;border-radius:12px" style-hover="background:#1FBE5B;color:#06301A">
+          <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">chat</span>Demander un devis
+        </a>
+        <a href="#realisations" style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.7);color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:16px 26px;border-radius:12px;white-space:nowrap" style-hover="background:#fff;color:#0A2540">
+          Voir nos réalisations<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:20px">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-bottom:1px solid #E6EBF1">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+    <div style="padding:clamp(28px,4vw,44px) 8px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid #EEF2F6">
+      <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(40px,5vw,56px);color:#1668B0;line-height:1">200+</span>
+      <span style="font-size:16px;font-weight:500;color:#33475E">forages réalisés depuis 2022</span>
+    </div>
+    <div style="padding:clamp(28px,4vw,44px) 8px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid #EEF2F6">
+      <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(40px,5vw,56px);color:#1668B0;line-height:1">14</span>
+      <span style="font-size:16px;font-weight:500;color:#33475E">ans d'expertise en forage</span>
+    </div>
+    <div style="padding:clamp(28px,4vw,44px) 8px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid #EEF2F6">
+      <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(40px,5vw,56px);color:#1668B0;line-height:1">31</span>
+      <span style="font-size:16px;font-weight:500;color:#33475E">régions de Côte d'Ivoire couvertes</span>
+    </div>
+    <div style="padding:clamp(28px,4vw,44px) 8px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid #EEF2F6">
+      <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(40px,5vw,56px);color:#1668B0;line-height:1">100%</span>
+      <span style="font-size:16px;font-weight:500;color:#33475E">eau potable</span>
+    </div>
+  </div>
+</section>
+
+<section id="entreprise" style="background:#fff;padding:clamp(72px,10vw,128px) clamp(20px,4vw,40px);scroll-margin-top:70px">
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,88px);align-items:center">
+    <div style="position:relative;aspect-ratio:4/5;max-height:620px;width:100%">
+      <img src="assets/equipe-foreuse.jpg" alt="Équipes FEPE devant une foreuse" style="width:100%;height:100%;object-fit:cover;object-position:50% 40%;border-radius:20px;display:block">
+      <div style="position:absolute;right:clamp(-12px,-1vw,0px);bottom:28px;background:#0A2540;color:#fff;padding:18px 22px;border-radius:14px;display:flex;align-items:center;gap:14px;pointer-events:none;box-shadow:0 14px 30px rgba(10,37,64,.25)">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px;color:#5FB4FF">location_on</span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:16px">Basée à Anyama</span><span style="font-size:14px;color:#B9CAE0">Côte d'Ivoire &amp; sous-région</span></span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#1668B0">L'entreprise</span>
+      <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.015em;color:#0A2540;text-wrap:balance">L'accès à l'eau, de l'étude à la mise en service</h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#33475E;text-wrap:pretty">Basée à Anyama, FEPE SARL met son expertise au service de l'accès à l'eau et des infrastructures. Nos équipes interviennent sur tout le territoire ivoirien et dans la sous-région, du forage domestique aux réseaux d'adduction d'eau potable pour les collectivités.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:8px">
+        <div style="background:#F3F6F9;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:14px;color:#1668B0">01</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px">Étude du terrain</span></div>
+        <div style="background:#F3F6F9;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:14px;color:#1668B0">02</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px">Réalisation</span></div>
+        <div style="background:#F3F6F9;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:14px;color:#1668B0">03</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:17px">Mise en service</span></div>
+      </div>
+      <a href="#contact" style="align-self:flex-start;display:flex;align-items:center;gap:8px;margin-top:6px;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;color:#1668B0;border-bottom:2px solid #1668B0;padding-bottom:4px">Discuter de votre projet<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:20px">arrow_forward</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:#F3F6F9;padding:clamp(72px,10vw,128px) clamp(20px,4vw,40px);scroll-margin-top:70px">
+  <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,5vw,56px)">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:680px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#1668B0">Nos services</span>
+      <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Six métiers, un seul interlocuteur</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px">
+      <div style="background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E3E9F0" style-hover="border-color:#1668B0;box-shadow:0 16px 36px rgba(10,37,64,.08)">
+        <div style="aspect-ratio:16/10;overflow:hidden;background:#E6F0FA"><img src="assets/dalle-jerrycans.jpg" alt="Forage FEPE aménagé" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:14px;position:relative">
+        <span style="width:56px;height:56px;border-radius:14px;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:-54px;border:4px solid #fff"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px">water_drop</span></span>
+        <h3 style="margin:6px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Forage d'eau</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#4A5D73">Forages domestiques, agricoles et villageois, de l'implantation au développement.</p>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E3E9F0" style-hover="border-color:#1668B0;box-shadow:0 16px 36px rgba(10,37,64,.08)">
+        <div style="aspect-ratio:16/10;overflow:hidden;background:#E6F0FA"><img src="assets/reunion-chantier.jpg" alt="Réunion d'étude avec les partenaires" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:14px;position:relative">
+        <span style="width:56px;height:56px;border-radius:14px;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:-54px;border:4px solid #fff"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px">radar</span></span>
+        <h3 style="margin:6px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Géophysique</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#4A5D73">Prospection et études du sous-sol pour implanter chaque forage au bon endroit.</p>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E3E9F0" style-hover="border-color:#1668B0;box-shadow:0 16px 36px rgba(10,37,64,.08)">
+        <div style="aspect-ratio:16/10;overflow:hidden;background:#E6F0FA"><img src="assets/chateau-agneby-2.jpg" alt="Château d'eau réalisé par FEPE" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:14px;position:relative">
+        <span style="width:56px;height:56px;border-radius:14px;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:-54px;border:4px solid #fff"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px">water</span></span>
+        <h3 style="margin:6px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Adduction &amp; châteaux d'eau</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#4A5D73">Réseaux d'eau potable et châteaux d'eau pour villages, villes et sites industriels.</p>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E3E9F0" style-hover="border-color:#1668B0;box-shadow:0 16px 36px rgba(10,37,64,.08)">
+        <div style="aspect-ratio:16/10;overflow:hidden;background:#E6F0FA"><img src="assets/tete-forage.jpg" alt="Tête de forage et équipements hydrauliques" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block"></div>
+        <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:14px;position:relative">
+        <span style="width:56px;height:56px;border-radius:14px;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:-54px;border:4px solid #fff"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px">valve</span></span>
+        <h3 style="margin:6px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Équipement &amp; pompage</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#4A5D73">Pompes immergées, solaires et électriques, installation et maintenance.</p>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E3E9F0" style-hover="border-color:#1668B0;box-shadow:0 16px 36px rgba(10,37,64,.08)">
+        <div style="aspect-ratio:16/10;overflow:hidden;background:#E6F0FA"><img src="assets/buse-tranchee.jpg" alt="Pose de buses en béton" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:14px;position:relative">
+        <span style="width:56px;height:56px;border-radius:14px;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:-54px;border:4px solid #fff"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px">construction</span></span>
+        <h3 style="margin:6px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Génie civil / VRD / TP</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#4A5D73">Ouvrages en béton, voiries, réseaux divers et travaux publics.</p>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E3E9F0" style-hover="border-color:#1668B0;box-shadow:0 16px 36px rgba(10,37,64,.08)">
+        <div style="aspect-ratio:16/10;overflow:hidden;background:#E6F0FA"><img src="assets/surpresseur.jpg" alt="Raccordement et ballon surpresseur" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:14px;position:relative">
+        <span style="width:56px;height:56px;border-radius:14px;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:-54px;border:4px solid #fff"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:30px">plumbing</span></span>
+        <h3 style="margin:6px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:21px">Plomberie industrielle</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#4A5D73">Tuyauteries, raccordements et installations hydrauliques pour l'industrie.</p>
+        </div>
+      </div>
+    </div>
+    <div style="background:#0A2540;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));color:#fff">
+      <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:16px">
+        <span style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#FFC94D"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">solar_power</span>Énergie solaire</span>
+        <h3 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);line-height:1.12;text-wrap:balance">Forages solaires pour villages et exploitations agricoles</h3>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:#C9D7E8;text-wrap:pretty">Pompage alimenté par panneaux solaires, réservoir surélevé et réseau d'irrigation goutte-à-goutte : de l'eau pour les champs et les communautés, sans carburant.</p>
+        <a href="#contact" style="align-self:flex-start;display:flex;align-items:center;gap:8px;margin-top:6px;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;color:#fff;border-bottom:2px solid #FFC94D;padding-bottom:4px" style-hover="color:#FFC94D">Étudier un projet solaire<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:20px">arrow_forward</span></a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;min-height:320px">
+        <img src="assets/solaire-forage.jpg" alt="Pompage solaire pour usage agricole" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        <img src="assets/solaire-chateau.jpg" alt="Panneaux solaires alimentant un château d'eau" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realisations" style="background:#0A2540;padding:clamp(72px,10vw,128px) 0;scroll-margin-top:70px;color:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#5FB4FF">Réalisations</span>
+      <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Nos chantiers sur le terrain</h2>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#B9CAE0">Forages, châteaux d'eau, réseaux et ouvrages de génie civil réalisés par nos équipes.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:#B9CAE0;min-width:64px">{{ counter }}</span>
+      <button onClick="{{ prev }}" aria-label="Photo précédente" style="width:54px;height:54px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#fff;color:#0A2540">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:24px">arrow_back</span>
+      </button>
+      <button onClick="{{ next }}" aria-label="Photo suivante" style="width:54px;height:54px;border-radius:50%;border:none;background:#1668B0;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#2A80CC">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:24px">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+  <div dir="ltr" ref="{{ trackRef }}" onScroll="{{ onScroll }}" onPointerDown="{{ onDown }}" onPointerMove="{{ onMove }}" onPointerUp="{{ onUp }}" onPointerLeave="{{ onUp }}" onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" onTouchStart="{{ touchPause }}" style="margin-top:44px;display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(clamp(20px,4vw,40px),calc((100vw - 1240px) / 2 + 40px));scroll-padding:0 max(clamp(20px,4vw,40px),calc((100vw - 1240px) / 2 + 40px));cursor:grab;touch-action:pan-x pan-y;user-select:none">
+    <sc-for list="{{ slides }}" as="s" hint-placeholder-count="4">
+      <figure onClick="{{ s.open }}" style="flex:0 0 auto;width:min(78vw,400px);margin:0;scroll-snap-align:start;position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#12345A;cursor:zoom-in">
+        <span style="position:absolute;top:14px;right:14px;z-index:2;width:40px;height:40px;border-radius:50%;background:rgba(10,37,64,.6);color:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">zoom_in</span></span>
+        <img src="{{ s.src }}" alt="{{ s.title }}" draggable="false" loading="lazy" style="position:absolute;left:0;top:0;width:100%;height:{{ s.h }}%;object-fit:cover;object-position:{{ s.pos }};display:block;pointer-events:none">
+        <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:56px 22px 20px;background:linear-gradient(180deg,rgba(10,37,64,0) 0%,rgba(10,37,64,.88) 70%);pointer-events:none;display:flex;flex-direction:column;align-items:flex-start;gap:8px">
+          <span style="background:#1668B0;color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:999px">{{ s.tag }}</span>
+          <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(18px,2vw,22px);color:#fff">{{ s.title }}</span>
+        </figcaption>
+      </figure>
+    </sc-for>
+  </div>
+  <div style="max-width:1240px;margin:28px auto 0;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <sc-for list="{{ dots }}" as="d" hint-placeholder-count="10">
+      <button onClick="{{ d.go }}" aria-label="Aller à la photo {{ d.n }}" style="height:8px;width:{{ d.w }}px;border-radius:999px;border:none;padding:0;cursor:pointer;background:{{ d.bg }};transition:width .3s,background .3s"></button>
+    </sc-for>
+  </div>
+</section>
+
+<section style="background:#EAF3FB;padding:clamp(72px,10vw,128px) clamp(20px,4vw,40px)">
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(36px,5vw,72px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#1668B0"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">water_drop</span>Notre engagement</span>
+      <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(36px,5.4vw,64px);line-height:1.02;letter-spacing:-.02em;color:#0A2540;text-wrap:balance">L'eau, source de vie</h2>
+      <p style="margin:0;font-family:Archivo,sans-serif;font-weight:600;font-size:clamp(20px,2.2vw,26px);line-height:1.35;color:#1668B0;text-wrap:balance">Tout le monde a droit à une eau potable, saine et accessible.</p>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#33475E;max-width:540px;text-wrap:pretty">Chaque forage réalisé, c'est une école, un village ou un quartier qui accède à l'eau potable près de chez lui. Moins de distance parcourue, moins de maladies hydriques, plus de temps pour apprendre et travailler.</p>
+      <a href="{{ waDevis }}" target="_blank" rel="noopener" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:#1668B0;color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:16px 24px;border-radius:12px;margin-top:6px" style-hover="background:#0A2540;color:#fff">Apporter l'eau à votre communauté<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:20px">arrow_forward</span></a>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <img src="assets/remise-forage.jpg" alt="Forage équipé remis à la communauté" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;display:block">
+      <img src="assets/chateau-metal.jpg" alt="Château d'eau métallique" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:18px;display:block">
+      <img src="assets/forage-nielle.jpg" alt="Forage — Mairie de Niellé, 2025" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;display:block">
+      <img src="assets/pose-pompe.jpg" alt="Pose d'une pompe à motricité humaine" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;display:block">
+    </div>
+  </div>
+</section>
+
+<section id="references" style="background:#fff;padding:clamp(72px,10vw,128px) clamp(20px,4vw,40px);scroll-margin-top:70px">
+  <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,5vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:680px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#1668B0">Références</span>
+      <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.015em">Ils nous font confiance</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="display:flex;align-items:center;gap:10px;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:#0A2540"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px;color:#1668B0">account_balance</span>Collectivités &amp; institutions</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px">
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center"><div style="height:96px;width:100%;display:flex;align-items:center;justify-content:center"><img src="assets/logo-agneby.jpg" alt="Conseil Régional Agnéby-Tiassa" style="max-width:100%;max-height:96px;object-fit:contain"></div><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1668B0;font-weight:600">Conseil Régional</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;line-height:1.2;color:#0A2540">Agnéby-Tiassa</span></span></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center"><div style="height:96px;width:100%;display:flex;align-items:center;justify-content:center"><img src="assets/logo-grands-ponts.jpg" alt="Conseil Régional des Grands-Ponts" style="max-width:100%;max-height:64px;object-fit:contain"></div><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1668B0;font-weight:600">Conseil Régional</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;line-height:1.2;color:#0A2540">des Grands-Ponts</span></span></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center"><div style="height:96px;width:100%;display:flex;align-items:center;justify-content:center"><img src="assets/logo-nielle.jpg" alt="Mairie Niellé" style="max-width:100%;max-height:96px;object-fit:contain"></div><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1668B0;font-weight:600">Mairie</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;line-height:1.2;color:#0A2540">Niellé</span></span></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center"><div style="height:96px;width:100%;display:flex;align-items:center;justify-content:center"><img src="assets/logo-tabou.jpg" alt="Mairie Tabou" style="max-width:100%;max-height:96px;object-fit:contain"></div><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1668B0;font-weight:600">Mairie</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;line-height:1.2;color:#0A2540">Tabou</span></span></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center"><div style="height:96px;width:100%;display:flex;align-items:center;justify-content:center"><span style="width:76px;height:76px;border-radius:50%;background:#E6F0FA;color:#1668B0;display:flex;align-items:center;justify-content:center"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:38px">account_balance</span></span></div><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1668B0;font-weight:600">Mairie</span><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;line-height:1.2;color:#0A2540">Ouagadougou</span></span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="display:flex;align-items:center;gap:10px;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:#0A2540"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px;color:#1668B0">apartment</span>Entreprises &amp; partenaires</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px">
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:18px 22px;height:120px;display:flex;align-items:center;justify-content:center"><img src="assets/logo-artemis.png" alt="Artemis Construction &amp; Travaux" style="max-width:100%;max-height:70px;object-fit:contain"></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:18px 22px;height:120px;display:flex;align-items:center;justify-content:center"><img src="assets/logo-baran.jpg" alt="Baran International" style="max-width:100%;max-height:62px;object-fit:contain"></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:12px 22px;height:120px;display:flex;align-items:center;justify-content:center"><img src="assets/logo-serneke.jpg" alt="Serneke Group-CI" style="max-width:100%;max-height:96px;object-fit:contain"></div>
+        <div style="background:#fff;border:1px solid #E3E9F0;border-radius:16px;padding:12px 22px;height:120px;display:flex;align-items:center;justify-content:center"><img src="assets/logo-ecl.jpg" alt="Entreprise Continental Logistics" style="max-width:100%;max-height:96px;object-fit:contain"></div>
+        <div style="background:#F3F6F9;border:1px solid #E3E9F0;border-radius:16px;padding:18px 22px;height:120px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:Archivo,sans-serif;font-weight:700;font-size:19px;color:#0A2540">CDLM de Lafigué</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding:0 clamp(20px,4vw,40px) clamp(72px,10vw,120px);background:#fff;scroll-margin-top:70px">
+  <div style="max-width:1240px;margin:0 auto;background:#1668B0;border-radius:28px;padding:clamp(40px,7vw,80px) clamp(24px,6vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px;align-items:center;color:#fff">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(34px,5vw,58px);line-height:1.04;letter-spacing:-.02em">Un projet d'eau ? Parlons-en</h2>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:#E3EEFA;max-width:520px">Décrivez-nous votre besoin sur WhatsApp : nous revenons vers vous avec une étude et un devis.</p>
+      <a href="{{ waDevis }}" target="_blank" rel="noopener" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:#25D366;color:#06301A;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;padding:18px 28px;border-radius:12px;margin-top:8px" style-hover="background:#1FBE5B;color:#06301A">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">chat</span>Écrire sur WhatsApp
+      </a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="tel:+2250759494523" style="display:flex;align-items:center;gap:16px;background:#0A2540;color:#fff;border-radius:16px;padding:20px 22px" style-hover="background:#0D2F52;color:#fff">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px;color:#5FB4FF">call</span>
+        <span style="display:flex;flex-direction:column;gap:3px"><span style="font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(18px,2vw,22px)">+225 07 59 49 45 23</span><span style="font-size:15px;color:#B9CAE0">WhatsApp &amp; téléphone · aussi 07 49 24 25 33</span></span>
+      </a>
+      <a href="mailto:contact@fepe-forage.com" style="display:flex;align-items:center;gap:16px;background:#0A2540;color:#fff;border-radius:16px;padding:20px 22px" style-hover="background:#0D2F52;color:#fff">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px;color:#5FB4FF">mail</span>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(17px,2vw,20px);word-break:break-word">contact@fepe-forage.com</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:16px;background:rgba(10,37,64,.35);color:#fff;border-radius:16px;padding:20px 22px">
+        <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px;color:#fff">location_on</span>
+        <span style="font-size:16px;line-height:1.45">Anyama Schneider<br>01 BP 845 Abidjan 01</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0A2540;color:#B9CAE0;padding:clamp(56px,8vw,88px) clamp(20px,4vw,40px) 28px">
+  <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:40px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="display:flex;align-items:center;gap:12px">
+          <span style="width:22px;height:22px;background:#5FB4FF;border-radius:50% 0 50% 50%;transform:rotate(-45deg);display:block;margin:0 6px"></span>
+          <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:22px;color:#fff">FEPE SARL</span>
+        </span>
+        <p style="margin:0;font-size:15px;line-height:1.6">Forage, adduction d'eau potable, châteaux d'eau et génie civil en Côte d'Ivoire et dans la sous-région.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:#fff;margin-bottom:4px">Services</span>
+        <a href="#services" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">Forage d'eau</a>
+        <a href="#services" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">Géophysique</a>
+        <a href="#services" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">Adduction &amp; châteaux d'eau</a>
+        <a href="#services" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">Équipement &amp; pompage</a>
+        <a href="#services" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">Génie civil / VRD / TP</a>
+        <a href="#services" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">Plomberie industrielle</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:#fff;margin-bottom:4px">Coordonnées</span>
+        <a href="tel:+2250759494523" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">+225 07 59 49 45 23</a>
+        <a href="tel:+2250749242533" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">+225 07 49 24 25 33</a>
+        <a href="mailto:contact@fepe-forage.com" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">contact@fepe-forage.com</a>
+        <span style="font-size:15px">Anyama Schneider, 01 BP 845 Abidjan 01</span>
+        <a href="https://www.fepe-forage.com" style="color:#B9CAE0;font-size:15px" style-hover="color:#fff">www.fepe-forage.com</a>
+        <a href="mentions-legales.html" style="display:flex;align-items:center;gap:6px;margin-top:8px;color:#fff;font-weight:600;font-size:15px;text-decoration:underline" style-hover="color:#5FB4FF">Mentions légales</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#8FA5BF">
+      <span style="display:flex;flex-wrap:wrap;gap:6px 14px"><span>© 2026 FEPE SARL · RC CI-ABJ-03-2022-B12-06767 · CC 2245209 J</span><a href="mentions-legales.html" style="color:#B9CAE0;text-decoration:underline" style-hover="color:#fff">Mentions légales</a></span>
+      <span>Conception : AkwabaIA — Le Bon IT</span>
+    </div>
+  </div>
+</footer>
+
+<a href="{{ waDevis }}" target="_blank" rel="noopener" aria-label="Contacter FEPE sur WhatsApp" style="position:fixed;right:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);z-index:60;display:flex;align-items:center;gap:10px;background:#25D366;color:#06301A;border-radius:999px;padding:14px 20px 14px 16px;font-family:Archivo,sans-serif;font-weight:700;font-size:15px;box-shadow:0 10px 28px rgba(6,48,26,.3);animation:waPulse 2.4s infinite" style-hover="background:#1FBE5B;color:#06301A">
+  <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px">chat</span><sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}"><span>WhatsApp</span></sc-if>
+</a>
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ lbClose }}" role="dialog" aria-label="Photo agrandie" style="position:fixed;inset:0;z-index:100;background:rgba(6,20,36,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:64px clamp(12px,6vw,96px) 24px">
+    <button onClick="{{ lbClose }}" aria-label="Fermer" style="position:absolute;top:16px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:rgba(255,255,255,.25)"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px">close</span></button>
+    <img src="{{ lb.src }}" alt="{{ lb.title }}" onClick="{{ stop }}" style="max-width:100%;max-height:calc(100vh - 170px);object-fit:contain;border-radius:12px;display:block">
+    <div onClick="{{ stop }}" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;color:#fff;text-align:center">
+      <span style="background:#1668B0;font-family:Archivo,sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:999px">{{ lb.tag }}</span>
+      <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px">{{ lb.title }}</span>
+      <span style="font-size:15px;color:#B9CAE0">{{ lbCounter }}</span>
+    </div>
+    <button onClick="{{ lbPrev }}" aria-label="Photo précédente" style="position:absolute;left:clamp(8px,2vw,24px);top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#1668B0"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px">arrow_back</span></button>
+    <button onClick="{{ lbNext }}" aria-label="Photo suivante" style="position:absolute;right:clamp(8px,2vw,24px);top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#1668B0"><span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:26px">arrow_forward</span></button>
+  </div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Carrousel&quot;},&quot;interval&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:4,&quot;min&quot;:2,&quot;max&quot;:10,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Carrousel&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1200, menu: false, active: 0 };
+  trackRef = React.createRef();
+  slides = [
+    ['chateau-agneby', "Château d'eau", "Château d'eau — Conseil Régional Agnéby-Tiassa"],
+    ['forage-nielle', 'Forage', 'Forage — Mairie de Niellé, 2025'],
+    ['remise-forage', 'Forage', 'Forage équipé remis à la communauté'],
+    ['pose-pompe', 'Pompage', "Pose d'une pompe à motricité humaine"],
+    ['chateau-metal', "Château d'eau", "Château d'eau métallique"],
+    ['solaire-reservoir', 'Énergie solaire', 'Forage équipé en pompage solaire'],
+    ['solaire-chateau', 'Énergie solaire', "Panneaux solaires alimentant un château d'eau"],
+    ['solaire-forage', 'Énergie solaire', 'Pompage solaire pour usage agricole'],
+    ['cdlm-panneau', 'Adduction', 'Hydraulique villageoise — CDLM de Lafigué', 112, '50% 0%'],
+    ['tete-forage', 'Équipement', 'Tête de forage et équipements hydrauliques', 112, '50% 0%'],
+    ['baran-reception', 'Plomberie', 'Réception de vannes — Baran International'],
+    ['surpresseur', 'Plomberie', 'Raccordement et ballon surpresseur'],
+    ['tranchee-adduction', 'Adduction', "Ouverture de tranchée pour réseau d'eau"],
+    ['conduite-brides', 'Adduction', 'Conduite et raccord à brides'],
+    ['reservoirs-supports', 'Équipement', 'Réservoirs sur supports métalliques'],
+    ['station-pompage', 'Pompage', 'Station de pompage et stockage'],
+    ['dalle-forage', 'Forage', "Dalle d'aménagement de forage"],
+    ['buses-beton', 'VRD', 'Pose de buses en béton'],
+    ['collecteur', 'VRD', "Collecteur d'assainissement"],
+    ['caniveaux-pose', 'VRD', 'Pose de caniveaux préfabriqués'],
+    ['caniveaux', 'VRD', 'Caniveaux en béton'],
+    ['ferraillage', 'Génie civil', 'Fondations et ferraillage', 112, '50% 0%'],
+    ['maconnerie', 'Génie civil', 'Élévation de murs en maçonnerie', 112, '50% 0%'],
+    ['enduits', 'Génie civil', 'Travaux de maçonnerie et enduits', 112, '50% 0%'],
+    ['reunion-chantier', 'Suivi de chantier', 'Réunion de chantier avec les partenaires']
+  ].map(([f, tag, title, h, pos], i) => ({ src: 'assets/' + f + '.jpg', tag, title, h: h || 100, pos: pos || '50% 50%', n: i + 1 }));
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    let saved = null; try { saved = localStorage.getItem('fepe-lang'); } catch (e) {}
+    const sys = (navigator.languages || [navigator.language || 'fr']).map(l => String(l).slice(0, 2).toLowerCase());
+    const lang = saved || sys.find(l => ['fr', 'en', 'ar'].includes(l)) || 'fr';
+    this.setState({ lang }, () => this.translate());
+    this.onKey = e => {
+      if (this.state.lb == null) return;
+      if (e.key === 'Escape') this.setState({ lb: null });
+      if (e.key === 'ArrowRight') this.lbStep(1);
+      if (e.key === 'ArrowLeft') this.lbStep(-1);
+    };
+    window.addEventListener('keydown', this.onKey);
+    this.startTimer();
+  }
+  translate() {
+    const D = window.FEPE_I18N; if (!D) return setTimeout(() => this.translate(), 200);
+    const lang = this.state.lang || 'fr';
+    if (!this.rev) { this.rev = {}; for (const k of Object.keys(D)) for (const [fr, t] of Object.entries(D[k])) this.rev[t] = fr; }
+    const conv = v => { const fr = this.rev[v] || v; return lang === 'fr' ? fr : (D[lang] && D[lang][fr]) || fr; };
+    const root = document.body;
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = w.nextNode())) {
+      const raw = n.nodeValue, v = raw.trim();
+      if (!v || n.parentElement.closest('script,style,.material-symbols-outlined')) continue;
+      const t = conv(v);
+      if (t !== v) n.nodeValue = raw.replace(v, t);
+    }
+    root.querySelectorAll('[alt],[aria-label]').forEach(el => {
+      ['alt', 'aria-label'].forEach(a => { const v = el.getAttribute(a); if (v) { const t = conv(v); if (t !== v) el.setAttribute(a, t); } });
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
+  componentDidUpdate(prev, prevState) {
+    clearTimeout(this.trT); this.trT = setTimeout(() => this.translate(), 0);
+    if (prev.autoplay !== this.props.autoplay || prev.interval !== this.props.interval) this.startTimer();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('keydown', this.onKey);
+    clearInterval(this.timer);
+  }
+  startTimer() {
+    clearInterval(this.timer);
+    if (this.props.autoplay === false) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ms = Math.max(2, this.props.interval ?? 4) * 1000;
+    this.timer = setInterval(() => {
+      if (this.hover || this.dragging || this.state.lb != null || Date.now() < (this.holdUntil || 0)) return;
+      this.step(1, true);
+    }, ms);
+  }
+  stepSize() {
+    const el = this.trackRef.current;
+    const f = el && el.querySelector('figure');
+    return f ? f.offsetWidth + 20 : 300;
+  }
+  goTo(i) {
+    const el = this.trackRef.current; if (!el) return;
+    const n = this.slides.length;
+    i = (i + n) % n;
+    el.scrollTo({ left: i * this.stepSize(), behavior: 'smooth' });
+  }
+  step(d, auto) {
+    const el = this.trackRef.current; if (!el) return;
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+    if (d > 0 && atEnd) return this.goTo(0);
+    if (d < 0 && el.scrollLeft <= 4) return this.goTo(this.slides.length - 1);
+    if (!auto) this.holdUntil = Date.now() + 6000;
+    this.goTo(this.state.active + d);
+  }
+  lbStep(d) {
+    const n = this.slides.length;
+    this.setState(s => ({ lb: (s.lb + d + n) % n }));
+  }
+  renderVals() {
+    const lbi = this.state.lb;
+    const lbOpen = lbi != null;
+    const wide = this.state.w >= 980;
+    const n = this.slides.length;
+    const a = this.state.active;
+    const msg = encodeURIComponent("Bonjour FEPE SARL, je souhaite obtenir un devis pour un projet d'eau.");
+    return {
+      wide, narrow: !wide,
+      mobileMenuOpen: !wide && this.state.menu,
+      menuIcon: this.state.menu ? 'close' : 'menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      closeMenu: () => this.setState({ menu: false }),
+      waDevis: 'https://wa.me/2250759494523?text=' + ({ en: encodeURIComponent('Hello FEPE SARL, I would like a quote for a water project.'), ar: encodeURIComponent('مرحبًا FEPE SARL، أرغب في الحصول على عرض سعر لمشروع مياه.') }[this.state.lang] || msg),
+      langs: [['fr', 'FR'], ['en', 'EN'], ['ar', 'ع']].map(([c, label]) => {
+        const on = (this.state.lang || 'fr') === c;
+        return { label, bg: on ? '#1668B0' : 'transparent', color: on ? '#fff' : '#33475E', set: () => { try { localStorage.setItem('fepe-lang', c); } catch (e) {} this.setState({ lang: c, menu: false }); } };
+      }),
+      slides: this.slides.map((s, i) => ({ ...s, open: () => { if (Date.now() - (this.dragEnd || 0) < 250) return; this.holdUntil = Date.now() + 8000; this.setState({ lb: i }); } })),
+      lbOpen,
+      lb: lbOpen ? this.slides[lbi] : {},
+      lbCounter: lbOpen ? (lbi + 1) + ' / ' + n : '',
+      lbClose: () => this.setState({ lb: null }),
+      lbPrev: e => { e.stopPropagation(); this.lbStep(-1); },
+      lbNext: e => { e.stopPropagation(); this.lbStep(1); },
+      stop: e => e.stopPropagation(),
+      counter: String(a + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0'),
+      dots: this.slides.map((s, i) => ({ n: i + 1, w: i === a ? 34 : 8, bg: i === a ? '#5FB4FF' : 'rgba(255,255,255,.3)', go: () => { this.holdUntil = Date.now() + 6000; this.goTo(i); } })),
+      trackRef: this.trackRef,
+      prev: () => this.step(-1),
+      next: () => this.step(1),
+      onScroll: () => {
+        const el = this.trackRef.current; if (!el) return;
+        let i = Math.round(el.scrollLeft / this.stepSize());
+        if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) i = n - 1;
+        i = Math.min(n - 1, Math.max(0, i));
+        if (i !== this.state.active) this.setState({ active: i });
+      },
+      onDown: e => {
+        if (e.pointerType !== 'mouse' || e.button !== 0) return;
+        const el = this.trackRef.current;
+        this.drag = { x: e.clientX, left: el.scrollLeft, moved: false };
+      },
+      onMove: e => {
+        if (!this.drag) return;
+        const el = this.trackRef.current;
+        const dx = e.clientX - this.drag.x;
+        if (!this.drag.moved && Math.abs(dx) > 6) {
+          this.drag.moved = true; this.dragging = true;
+          el.style.scrollSnapType = 'none'; el.style.scrollBehavior = 'auto'; el.style.cursor = 'grabbing';
+        }
+        if (this.drag.moved) el.scrollLeft = this.drag.left - dx;
+      },
+      onUp: () => {
+        if (!this.drag) return;
+        const el = this.trackRef.current;
+        const moved = this.drag.moved;
+        const dir = Math.sign(this.drag.left - el.scrollLeft);
+        this.drag = null;
+        if (!moved) return;
+        this.dragEnd = Date.now();
+        el.style.cursor = 'grab';
+        const target = Math.round(el.scrollLeft / this.stepSize()) + (Math.abs(el.scrollLeft % this.stepSize()) > 40 ? 0 : 0);
+        el.scrollTo({ left: Math.max(0, target) * this.stepSize(), behavior: 'smooth' });
+        setTimeout(() => { el.style.scrollSnapType = 'x mandatory'; this.dragging = false; }, 450);
+        this.holdUntil = Date.now() + 6000;
+        void dir;
+      },
+      pause: () => { this.hover = true; },
+      resume: () => { this.hover = false; },
+      touchPause: () => { this.holdUntil = Date.now() + 7000; }
+    };
+  }
+}
+</script>
+</body>
+</html>
