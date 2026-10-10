@@ -15,6 +15,7 @@
 <meta property="og:image" content="assets/hero-foreuse.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0A2540">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0A2540"/><path d="M50 26 C50 26 34 46 34 57 a16 16 0 0 0 32 0 C66 46 50 26 50 26z" fill="#1668B0"/></svg></template>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231668B0'/%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"FEPE SARL","description":"Forage et adduction d'eau, génie civil, VRD","url":"https://www.fepe-forage.com","telephone":"+2250759494523","email":"contact@fepe-forage.com","address":{"@type":"PostalAddress","streetAddress":"Anyama Schneider, 01 BP 845 Abidjan 01","addressLocality":"Anyama","addressCountry":"CI"},"areaServed":"Côte d'Ivoire"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,28 +81,27 @@ a:hover{color:#0A2540}
   </sc-if>
 </header>
 
-<section id="accueil" style="position:relative;min-height:min(88vh,800px);display:flex;align-items:flex-end;background:#0A2540">
-  <div style="position:absolute;inset:0">
-    <img src="assets/hero-foreuse.jpg" alt="Équipe FEPE sur un chantier de forage" style="width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block">
-
-  </div>
-  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,37,64,.35) 0%,rgba(10,37,64,.55) 45%,rgba(10,37,64,.92) 100%)"></div>
-  <div style="position:relative;width:100%;max-width:1240px;margin:0 auto;padding:clamp(120px,18vh,180px) clamp(20px,4vw,40px) clamp(56px,9vh,96px);pointer-events:none">
-    <div style="max-width:760px;display:flex;flex-direction:column;gap:24px">
-      <span style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:999px;white-space:nowrap">
-        <span style="width:8px;height:8px;border-radius:50%;background:#5FB4FF"></span>Anyama · Abidjan · Côte d'Ivoire
-      </span>
-      <h1 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;color:#fff;font-size:clamp(38px,6.4vw,76px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">L'eau, notre métier — du forage au robinet</h1>
-      <p style="margin:0;color:#E3ECF5;font-size:clamp(17px,1.7vw,20px);line-height:1.6;max-width:640px;text-wrap:pretty">FEPE SARL conçoit et réalise vos projets d'eau et de génie civil en Côte d'Ivoire : forage, adduction d'eau potable, châteaux d'eau, équipement et pompage. De l'étude du terrain à la mise en service, des ouvrages fiables et durables.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;pointer-events:auto">
-        <a href="{{ waDevis }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#25D366;color:#06301A;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:17px 26px;border-radius:12px" style-hover="background:#1FBE5B;color:#06301A">
-          <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">chat</span>Demander un devis
-        </a>
-        <a href="#realisations" style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.7);color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:16px 26px;border-radius:12px;white-space:nowrap" style-hover="background:#fff;color:#0A2540">
-          Voir nos réalisations<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:20px">arrow_forward</span>
-        </a>
+<section id="accueil" style="background:#0A2540;overflow:hidden">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(32px,5vw,64px);align-items:center">
+      <div style="display:flex;flex-direction:column;gap:24px;min-width:0">
+        <span style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:999px;white-space:nowrap">
+          <span style="width:8px;height:8px;border-radius:50%;background:#5FB4FF"></span>Anyama · Abidjan · Côte d'Ivoire
+        </span>
+        <h1 style="margin:0;font-family:Archivo,sans-serif;font-weight:800;color:#fff;font-size:clamp(36px,4.8vw,64px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">L'eau, notre métier — du forage au robinet</h1>
+        <p style="margin:0;color:#E3ECF5;font-size:clamp(17px,1.7vw,20px);line-height:1.6;max-width:640px;text-wrap:pretty">FEPE SARL conçoit et réalise vos projets d'eau et de génie civil en Côte d'Ivoire : forage, adduction d'eau potable, châteaux d'eau, équipement et pompage. De l'étude du terrain à la mise en service, des ouvrages fiables et durables.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;pointer-events:auto">
+          <a href="{{ waDevis }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#25D366;color:#06301A;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:17px 26px;border-radius:12px" style-hover="background:#1FBE5B;color:#06301A">
+            <span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:22px">chat</span>Demander un devis
+          </a>
+          <a href="#realisations" style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.7);color:#fff;font-family:Archivo,sans-serif;font-weight:700;font-size:16px;padding:16px 26px;border-radius:12px;white-space:nowrap" style-hover="background:#fff;color:#0A2540">
+            Voir nos réalisations<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:20px">arrow_forward</span>
+          </a>
+        </div>
       </div>
-    </div>
+    <figure style="margin:0;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 24px 60px rgba(0,0,0,.35);background:#12345A">
+      <img src="assets/hero-foreuse.jpg" alt="Foreuse FEPE en action sur un chantier de forage d'eau" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:45% 40%;display:block">
+      <figcaption style="position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:8px;background:#fff;color:#0A2540;font-family:Archivo,sans-serif;font-weight:700;font-size:13px;padding:8px 12px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.2)"><span style="width:8px;height:8px;border-radius:50%;background:#25D366"></span>Forage en cours</figcaption>
+    </figure>
   </div>
 </section>
 
