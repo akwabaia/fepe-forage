@@ -1,7 +1,7 @@
 window.FEPE_I18N = {
 en: {
 "Forage & Adduction d'eau":"Drilling & Water Supply","Accueil":"Home","L'entreprise":"About us","Services":"Services","Réalisations":"Projects","Références":"References","Contact":"Contact","Nous contacter":"Contact us",
-"Anyama · Abidjan · Côte d'Ivoire":"Anyama · Abidjan · Côte d'Ivoire","L'eau, notre métier — du forage au robinet":"Water is our trade — from borehole to tap",
+"Anyama · Abidjan · Côte d'Ivoire":"Anyama · Abidjan · Côte d'Ivoire","Forage en cours":"Drilling in progress","L'eau, notre métier — du forage au robinet":"Water is our trade — from borehole to tap",
 "FEPE SARL conçoit et réalise vos projets d'eau et de génie civil en Côte d'Ivoire : forage, adduction d'eau potable, châteaux d'eau, équipement et pompage. De l'étude du terrain à la mise en service, des ouvrages fiables et durables.":"FEPE SARL designs and delivers water and civil engineering projects in Côte d'Ivoire: drilling, drinking water supply, water towers, equipment and pumping. From site survey to commissioning, reliable and durable infrastructure.",
 "Demander un devis":"Request a quote","Voir nos réalisations":"See our projects","forages réalisés depuis 2022":"boreholes drilled since 2022","ans d'expertise en forage":"years of drilling expertise","régions de Côte d'Ivoire couvertes":"regions of Côte d'Ivoire covered","régions de Côte d'Ivoire couvertes":"منطقة مغطاة في كوت ديفوار","régions couvertes":"regions covered","eau potable":"drinking water",
 "Basée à Anyama":"Based in Anyama","Côte d'Ivoire & sous-région":"Côte d'Ivoire & West Africa","L'accès à l'eau, de l'étude à la mise en service":"Access to water, from survey to commissioning",
@@ -29,7 +29,7 @@ en: {
 },
 ar: {
 "Forage & Adduction d'eau":"حفر الآبار وإمدادات المياه","Accueil":"الرئيسية","L'entreprise":"من نحن","Services":"الخدمات","Réalisations":"إنجازاتنا","Références":"مراجعنا","Contact":"اتصل بنا","Nous contacter":"تواصل معنا",
-"Anyama · Abidjan · Côte d'Ivoire":"أنياما · أبيدجان · كوت ديفوار","L'eau, notre métier — du forage au robinet":"الماء مهنتنا — من البئر إلى الصنبور",
+"Forage en cours":"الحفر جارٍ","Anyama · Abidjan · Côte d'Ivoire":"أنياما · أبيدجان · كوت ديفوار","L'eau, notre métier — du forage au robinet":"الماء مهنتنا — من البئر إلى الصنبور",
 "FEPE SARL conçoit et réalise vos projets d'eau et de génie civil en Côte d'Ivoire : forage, adduction d'eau potable, châteaux d'eau, équipement et pompage. De l'étude du terrain à la mise en service, des ouvrages fiables et durables.":"تصمم FEPE SARL وتنفذ مشاريع المياه والهندسة المدنية في كوت ديفوار: حفر الآبار، إمدادات مياه الشرب، الخزانات العالية، التجهيز والضخ. من دراسة الموقع حتى التشغيل، منشآت موثوقة ودائمة.",
 "Demander un devis":"اطلب عرض سعر","Voir nos réalisations":"شاهد إنجازاتنا","forages réalisés depuis 2022":"بئر منجزة منذ 2022","ans d'expertise en forage":"سنة خبرة في الحفر","régions de Côte d'Ivoire couvertes":"منطقة مغطاة في كوت ديفوار","régions couvertes":"مناطق مغطاة","eau potable":"مياه صالحة للشرب",
 "Basée à Anyama":"مقرنا في أنياما","Côte d'Ivoire & sous-région":"كوت ديفوار والمنطقة","L'accès à l'eau, de l'étude à la mise en service":"الوصول إلى الماء، من الدراسة إلى التشغيل",
